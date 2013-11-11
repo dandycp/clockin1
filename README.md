@@ -1,4 +1,0 @@
-clockin1
-========
-
-ClockinPoint
