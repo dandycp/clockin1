@@ -1,0 +1,26 @@
+Options +FollowSymLinks
+RewriteEngine on
+
+# non-www to www
+RewriteCond %{HTTP_HOST} ^clockinpoint.com [NC] 
+#RewriteRule ^(.*)$ http://www.clockinpoint.com/admin/$1 [L,R=301]
+RewriteRule ^(.*)$ http://localhost/clockin/admin/$1 [L,R=301]
+
+#exception for shorthand phpthumb links eg /userfiles/myimage.jpg?w=300
+RewriteCond %{REQUEST_URI}  \.(jpg|jpeg|png|gif|bmp)$ 
+RewriteCond %{QUERY_STRING} ^([a-z]{1}=.*?)$ 
+RewriteRule ^(.*)$ application/third_party/phpThumb/phpThumb.php?src=../../../$1&%1 [NE,L]
+
+#exception for phpThumb
+RewriteRule ^(.*)?phpThumb/(.*)?$ application/third_party/phpThumb/$2 [NC,L]
+
+#exception for userfiles
+RewriteRule ^(.*)?userfiles/(.*)?$ userfiles/$2 [L]
+
+#exception for admin
+RewriteRule ^(.*)?admin/(.*)?$ admin/$2 [NC,L]
+
+#main rule - send everything that is not one of the following extensions to index.php
+RewriteRule !\.(jpg|jpeg|gif|png|css|js|pdf|pl|txt|xml|swf|flv|ico)$ index.php [NC,L]
+
+

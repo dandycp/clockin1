@@ -1,0 +1,291 @@
+<h2>Enter codes</h2>
+<!--<div class="well lead">Do you want to enter single codes or start and end codes?</div>-->
+
+<? if ($error) : ?>
+	<div class="alert alert-danger"><strong>Error: </strong><?=$error?></div>
+<? endif ?>
+
+		<div class="single_code well" id="singlecode">
+			<h4>I want to enter single codes</h4>
+			<p>Click this box if you are wanting to enter single codes.</p>
+		</div>
+	
+		<div class="dual_code well" id="dualcode">
+			
+			<h4>I want to enter start &amp; end codes</h4>
+			<p>Click this box if you are wanting to enter start and end codes.</p>
+
+		</div>
+
+
+	
+	<div id="single-codes">
+			
+		<form action="" method="post" class="pull-left form-inline" role="form">
+			<h3>Entering single codes</h3>
+			<p>Use when only a single code is recorded per visit/session.</p>
+		<? if (!empty($clients)) : ?>
+		<div class="form-group">
+			<label class="control-label">Codes for different clients must be entered seperately. Please choose which client you wish to enter codes for:</label>
+			<div class="controls">
+				<select name="client_id" id="client_id" class="form-control">
+				<option value="">Please select client...</option>
+				<? foreach ($clients as $client) : ?>
+				<option value="<?=$client->id?>"><?=$client->name()?></option>
+				<? endforeach ?>
+				</select>
+				
+			</div>
+		</div>
+		<? endif ?>
+
+
+		
+
+		<div class="form-group">
+			<? if (!empty($people)) : ?>
+			<div class="col-lg-5">
+			<label class="control-label">Default Person:</label>
+				<select name="default_person_id" id="default_person_id" class="form-control">
+					<option value=""> -- none -- </option>
+					<? if ($people) foreach ($people as $person) : ?>
+					<option value="<?=$person->id?>"><?=$person->name?></option>
+					<? endforeach ?>
+				</select>
+			</div>
+			<? endif ?>
+
+			&nbsp;&nbsp;
+
+			<? if (!empty($providers)) : ?>
+				<div class="col-lg-5">
+					<label class="control-label">Default Provider:</label>
+					<select name="default_provider_id" id="default_provider_id" class="form-control">
+					<option value=""> -- none -- </option>
+					<? foreach ($providers as $provider) : ?>
+					<option value="<?=$provider->id?>"><?=$provider->name()?></option>
+					<? endforeach ?>
+				</select>
+			</div>
+			<? endif ?>
+
+			&nbsp;&nbsp;
+			<? if (!empty($categories)) : ?>
+		<div class="col-lg-5">
+			<label class="control-label">Default Description</label>
+			
+				<select name="default_category_id" id="default_category_id" class="form-control">
+				<option value="19">General Works</option>
+				<? if ($categories) foreach ($categories as $category) : ?>
+				<option value="<?=$category->id?>"><?=$category->name?></option>
+				<? endforeach ?>
+				</select>
+				</div>
+			
+	
+		<? endif ?>
+
+		</div>
+
+
+
+	
+		
+			
+	
+		<div class="codes-container">
+			<table class="code-table">
+			<tr>
+		
+				<th><div class="span2">Code:</div></th>
+				<? if ($providers) : ?>
+				<th><div class="span3">Provider</div></th>
+				<? endif ?>
+				<th><div class="span3">Person:</div></th>
+				<th><div class="span3">Category:</div></th>
+			</tr>
+			<tr>
+		<td><div class="row">
+		
+		<div class="col-lg-5 control-group">
+			<!-- Single Code -->
+			<input type="text" maxlength="8" width="8" class="code single-code form-control" data-type="single_codes" name="singles[0][code]" autofocus>
+		</div>
+		</td>
+		<td>
+			<? if ($providers) : ?>
+			<div class="span3 control-group">
+
+				<select name="singles[0][provider_id]" class="provider_id form-control">
+					<option value=""> - </option>
+					<? foreach ($providers as $provider) : ?>
+					<option value="<?=$provider->id?>"><?=$provider->name()?></option>
+					<? endforeach ?>
+				</select>
+			</div>
+			<? endif ?>
+		</td>
+		<td>
+			<div class="span3 control-group">
+				<select name="singles[0][person_id]" class="person_id form-control">
+					<option value=""> - </option>
+					<? if ($people) foreach ($people as $person) : ?>
+					<option value="<?=$person->id?>"><?=$person->name?></option>
+					<? endforeach ?>
+				</select>
+			</div>
+		</td>
+		<td>
+			<div class="span3 control-group">
+				<select name="singles[0][category_id]" class="category_id form-control">
+					<option value=""> - </option>
+					<? if ($categories) foreach ($categories as $category) : ?>
+					<option value="<?=$category->id?>"><?=$category->name?></option>
+					<? endforeach ?>
+				</select>
+			</div>
+		</td>
+		<td>
+			<? if ($show_custom_1) : ?>
+			<div class="span3 control-group">
+				<input type="text" name="singles[0][custom_1]" class="custom_1" placeholder="<?=$this->account->custom_1_name?>">
+			</div>
+			<? endif ?>
+		</td>
+		<td>
+			<? if ($show_custom_2) : ?>
+			<div class="span3 control-group">
+				<input type="text" name="singles[0][custom_2]" class="custom_2" placeholder="<?=$this->account->custom_2_name?>">
+			</div>
+			<? endif ?>
+		</td>
+			
+			
+				<td><a class="add-btn"><img src="<?php echo site_url(); ?>images/add.png" width="16" height="16"></a> </td>
+				<td><a class="delete-btn" style="display:none;"><img src="images/delete.png" width="16" height="16"></a> </td>
+			
+			
+			<div class="span12 help"></div>
+			
+		</div>
+		</div>
+	</tr>
+	<tr><td><br /></td></tr>
+	<tr>
+		<td>
+			<button type="submit" class="btn btn-success btn-large">Confirm</button>
+		</td>
+	</tr>
+		</form>
+	</table>
+	</div> <!--end #single-codes-->
+
+	<div id="start-end-codes" class="pull-left form-inline">
+		<h3>Entering start &amp; end codes</h3>
+		<p>Use when both a start and end code have been recorded per visit/session.</p>
+		
+		<form class="form-inline" role="form" method="post">
+
+			<? if (!empty($clients)) : ?>
+		<div class="form-group">
+			<label class="control-label">Codes for different clients must be entered seperately. Please choose which client you wish to enter codes for:</label>
+			<div class="controls">
+				<select name="client_id" id="client_id" class="form-control">
+				<option value="">Please select client...</option>
+				<? foreach ($clients as $client) : ?>
+				<option value="<?=$client->id?>"><?=$client->name()?></option>
+				<? endforeach ?>
+				</select>
+				
+			</div>
+		</div>
+		<? endif ?>
+
+		<div class="form-group">
+			<? if (!empty($people)) : ?>
+			<label class="control-label">Default Person:</label>
+				<select name="default_person_id" id="default_person_id" class="form-control">
+					<option value="">- none -</option>
+					<? if ($people) foreach ($people as $person) : ?>
+					<option value="<?=$person->id?>"><?=$person->name?></option>
+					<? endforeach ?>
+				</select>
+			<? endif ?>
+
+			<? if (!empty($providers)) : ?>
+			
+				<label class="control-label">Default Provider:</label>
+					<select name="default_provider_id" id="default_provider_id" class="form-control">
+					<option value=""> - none - these are my own</option>
+					<? foreach ($providers as $provider) : ?>
+					<option value="<?=$provider->id?>"><?=$provider->name()?></option>
+					<? endforeach ?>
+				</select>
+			<? endif ?>
+
+			&nbsp;&nbsp;
+
+			<? if (!empty($categories)) : ?>
+	
+			<label class="control-label">Default Category</label>
+			
+				<select name="default_category_id" id="default_category_id" class="form-control">
+				<option value="">- none -</option>
+				<? if ($categories) foreach ($categories as $category) : ?>
+				<option value="<?=$category->id?>"><?=$category->name?></option>
+				<? endforeach ?>
+				</select>
+				
+		
+
+				<? endif ?>
+			</div>
+		    <br /><br />
+		
+			<table class="code-table">
+				<tr>
+					<td><label for="inputEmail1" class="control-label">Start Code</label>&nbsp;
+					<input type="text" maxlength="8" width="8" id="code-bg" class="col-lg-4 code start-code form-control" data-type="start_codes" name="pairs[0][start]" autofocus></td>
+				
+					<td><label for="inputEmail1" class="control-label">End Code</label>&nbsp;
+					<input type="text" maxlength="8" width="8" id="code-bg" class="col-lg-4 code end-code form-control" data-type="end_codes" name="pairs[0][end]"></td>
+
+					<td><? if ($providers) : ?><label for="inputEmail1" class="control-label">Provider</label>&nbsp;
+					<select name="pairs[0][provider_id]" class="provider_id form-control">
+							<option value=""> - </option>
+							<? foreach ($providers as $provider) : ?>
+							<option value="<?=$provider->id?>"><?=$provider->name()?></option>
+							<? endforeach ?>
+					</select><? endif ?></td>
+
+					<td><label for="inputEmail1" class="control-label">Person</label>&nbsp;
+					<select name="pairs[0][person_id]" class="person_id form-control">
+						<option value=""> - </option>
+						<? if ($people) foreach ($people as $person) : ?>
+						<option value="<?=$person->id?>"><?=$person->name?></option>
+						<? endforeach ?>
+					</select></td>
+
+					<td><label for="inputEmail1" class="control-label">Type</label>&nbsp;
+					<select name="pairs[0][category_id]" class="category_id form-control">
+						<option value=""> - </option>
+						<? if ($categories) foreach ($categories as $category) : ?>
+						<option value="<?=$category->id?>"><?=$category->name?></option>
+						<? endforeach ?>
+					</select></td>
+					<td>&nbsp;&nbsp;</td>
+					<td><a class="add-btn"><img src="<?php echo base_url(); ?>images/add.png" width="16" height="16"></a>&nbsp;&nbsp;<a class="delete-btn" style="display:none;"><img src="<?php echo base_url(); ?>images/delete.png" width="16" height="16"></a></td>
+				</tr>
+
+			</table>
+		  <br /><br />
+		  <div class="form-actions">
+			<button type="submit" class="btn btn-success btn-large">Confirm</button>
+		</div>
+
+  		</form>
+	</div> <!--end #start-end-codes-->
+
+
+<script src="<?php echo site_url(); ?>js/jquery.autotab-1.1b.js"></script>
+<script src="<?php echo site_url(); ?>js/code-entry.js"></script>

@@ -1,0 +1,230 @@
+<?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed'); ?>
+
+ERROR - 2013-10-25 09:59:57 --> Severity: Notice  --> Undefined variable: client /Applications/MAMP/htdocs/clockin/admin/application/views/devices/add.php 32
+ERROR - 2013-10-25 09:59:57 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/views/devices/add.php 32
+ERROR - 2013-10-25 10:02:52 --> Severity: Notice  --> Undefined variable: client /Applications/MAMP/htdocs/clockin/admin/application/views/devices/edit.php 45
+ERROR - 2013-10-25 10:02:52 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/views/devices/edit.php 45
+ERROR - 2013-10-25 10:03:55 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/models/model_account.php 100
+ERROR - 2013-10-25 10:03:55 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/models/model_account.php 100
+ERROR - 2013-10-25 10:03:55 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/models/model_account.php 100
+ERROR - 2013-10-25 10:03:55 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/models/model_account.php 100
+ERROR - 2013-10-25 10:03:55 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/models/model_account.php 100
+ERROR - 2013-10-25 10:03:55 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/models/model_account.php 100
+ERROR - 2013-10-25 10:03:55 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/views/providers/list.php 17
+ERROR - 2013-10-25 10:07:51 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/models/model_account.php 100
+ERROR - 2013-10-25 10:07:51 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/models/model_account.php 100
+ERROR - 2013-10-25 10:07:51 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/models/model_account.php 100
+ERROR - 2013-10-25 10:07:51 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/models/model_account.php 100
+ERROR - 2013-10-25 10:07:51 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/models/model_account.php 100
+ERROR - 2013-10-25 10:07:51 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/models/model_account.php 100
+ERROR - 2013-10-25 10:07:51 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/views/providers/list.php 17
+ERROR - 2013-10-25 10:07:54 --> Severity: Notice  --> Undefined property: Providers::$hour_rate /Applications/MAMP/htdocs/clockin/admin/application/controllers/providers.php 24
+ERROR - 2013-10-25 10:07:54 --> Severity: Notice  --> Undefined variable: names /Applications/MAMP/htdocs/clockin/admin/application/controllers/providers.php 25
+ERROR - 2013-10-25 10:12:02 --> Severity: Notice  --> Undefined property: Providers::$hour_rate /Applications/MAMP/htdocs/clockin/admin/application/controllers/providers.php 119
+ERROR - 2013-10-25 10:12:26 --> Severity: Notice  --> Undefined property: Providers::$hour_rate /Applications/MAMP/htdocs/clockin/admin/application/controllers/providers.php 119
+ERROR - 2013-10-25 10:12:48 --> Severity: Notice  --> Undefined property: Providers::$hour_rate /Applications/MAMP/htdocs/clockin/admin/application/controllers/providers.php 119
+ERROR - 2013-10-25 10:32:12 --> Severity: Notice  --> Undefined variable: errors /Applications/MAMP/htdocs/clockin/admin/application/views/providers/edit.php 10
+ERROR - 2013-10-25 10:33:02 --> Severity: Warning  --> Cannot modify header information - headers already sent by (output started at /Applications/MAMP/htdocs/clockin/admin/application/controllers/providers.php:118) /Applications/MAMP/htdocs/clockin/admin/system/libraries/Session.php 675
+ERROR - 2013-10-25 10:33:02 --> Severity: Notice  --> Undefined variable: errors /Applications/MAMP/htdocs/clockin/admin/application/views/providers/edit.php 10
+ERROR - 2013-10-25 10:33:16 --> Severity: Notice  --> Undefined variable: errors /Applications/MAMP/htdocs/clockin/admin/application/views/providers/edit.php 10
+ERROR - 2013-10-25 10:33:24 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/models/model_account.php 100
+ERROR - 2013-10-25 10:33:24 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/models/model_account.php 100
+ERROR - 2013-10-25 10:33:24 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/models/model_account.php 100
+ERROR - 2013-10-25 10:33:24 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/models/model_account.php 100
+ERROR - 2013-10-25 10:33:24 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/models/model_account.php 100
+ERROR - 2013-10-25 10:33:24 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/models/model_account.php 100
+ERROR - 2013-10-25 10:33:24 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/views/providers/list.php 17
+ERROR - 2013-10-25 10:34:38 --> Severity: Notice  --> Undefined property: Account::$hour_rate /Applications/MAMP/htdocs/clockin/admin/application/controllers/account.php 384
+ERROR - 2013-10-25 10:35:04 --> Severity: Notice  --> Undefined variable: rate /Applications/MAMP/htdocs/clockin/admin/application/controllers/account.php 385
+ERROR - 2013-10-25 10:36:43 --> Severity: Notice  --> Undefined variable: rate /Applications/MAMP/htdocs/clockin/admin/application/controllers/account.php 385
+ERROR - 2013-10-25 10:40:14 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/controllers/account.php 385
+ERROR - 2013-10-25 10:42:26 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/controllers/account.php 385
+ERROR - 2013-10-25 10:43:09 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/controllers/account.php 385
+ERROR - 2013-10-25 10:43:18 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/controllers/account.php 385
+ERROR - 2013-10-25 10:45:01 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/controllers/account.php 385
+ERROR - 2013-10-25 10:45:13 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/controllers/account.php 385
+ERROR - 2013-10-25 10:46:08 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/controllers/account.php 385
+ERROR - 2013-10-25 10:46:14 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/controllers/account.php 385
+ERROR - 2013-10-25 10:46:41 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/controllers/account.php 385
+ERROR - 2013-10-25 10:50:23 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/models/model_account.php 100
+ERROR - 2013-10-25 10:50:23 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/models/model_account.php 100
+ERROR - 2013-10-25 10:50:23 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/models/model_account.php 100
+ERROR - 2013-10-25 10:50:23 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/models/model_account.php 100
+ERROR - 2013-10-25 10:50:23 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/models/model_account.php 100
+ERROR - 2013-10-25 10:50:23 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/models/model_account.php 100
+ERROR - 2013-10-25 10:50:23 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/views/providers/list.php 17
+ERROR - 2013-10-25 10:51:56 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/controllers/account.php 385
+ERROR - 2013-10-25 10:52:16 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/controllers/account.php 385
+ERROR - 2013-10-25 10:52:40 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/controllers/account.php 385
+ERROR - 2013-10-25 10:52:48 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/controllers/account.php 385
+ERROR - 2013-10-25 10:53:25 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/controllers/account.php 385
+ERROR - 2013-10-25 10:53:52 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/controllers/account.php 385
+ERROR - 2013-10-25 10:55:10 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/controllers/account.php 385
+ERROR - 2013-10-25 10:56:30 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/controllers/account.php 385
+ERROR - 2013-10-25 10:57:12 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/controllers/account.php 385
+ERROR - 2013-10-25 10:57:45 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/models/client_m.php 142
+ERROR - 2013-10-25 10:57:45 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/controllers/account.php 374
+ERROR - 2013-10-25 10:57:45 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/controllers/account.php 375
+ERROR - 2013-10-25 10:57:45 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/controllers/account.php 376
+ERROR - 2013-10-25 10:57:45 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/models/client_m.php 142
+ERROR - 2013-10-25 10:57:45 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/controllers/account.php 385
+ERROR - 2013-10-25 10:57:45 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/views/account/notify.php 13
+ERROR - 2013-10-25 10:57:45 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/views/account/notify.php 15
+ERROR - 2013-10-25 10:57:45 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/views/account/notify.php 25
+ERROR - 2013-10-25 10:57:45 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/views/account/notify.php 25
+ERROR - 2013-10-25 10:57:45 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/views/account/notify.php 26
+ERROR - 2013-10-25 10:57:45 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/views/account/notify.php 26
+ERROR - 2013-10-25 10:58:05 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/models/client_m.php 142
+ERROR - 2013-10-25 10:58:05 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/controllers/account.php 374
+ERROR - 2013-10-25 10:58:05 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/controllers/account.php 375
+ERROR - 2013-10-25 10:58:05 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/controllers/account.php 376
+ERROR - 2013-10-25 10:58:05 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/models/client_m.php 142
+ERROR - 2013-10-25 10:58:05 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/controllers/account.php 385
+ERROR - 2013-10-25 10:58:05 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/views/account/notify.php 15
+ERROR - 2013-10-25 10:58:05 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/views/account/notify.php 25
+ERROR - 2013-10-25 10:58:05 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/views/account/notify.php 25
+ERROR - 2013-10-25 10:58:05 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/views/account/notify.php 26
+ERROR - 2013-10-25 10:58:05 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/views/account/notify.php 26
+ERROR - 2013-10-25 11:17:23 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/models/client_m.php 142
+ERROR - 2013-10-25 11:17:23 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/controllers/account.php 374
+ERROR - 2013-10-25 11:17:23 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/controllers/account.php 375
+ERROR - 2013-10-25 11:17:23 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/controllers/account.php 376
+ERROR - 2013-10-25 11:17:23 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/models/client_m.php 142
+ERROR - 2013-10-25 11:17:23 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/controllers/account.php 385
+ERROR - 2013-10-25 11:17:32 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/models/client_m.php 142
+ERROR - 2013-10-25 11:17:32 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/controllers/account.php 374
+ERROR - 2013-10-25 11:17:32 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/controllers/account.php 375
+ERROR - 2013-10-25 11:17:32 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/controllers/account.php 376
+ERROR - 2013-10-25 11:17:32 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/models/client_m.php 142
+ERROR - 2013-10-25 11:17:32 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/controllers/account.php 385
+ERROR - 2013-10-25 11:17:32 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/views/account/notify.php 24
+ERROR - 2013-10-25 11:17:32 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/views/account/notify.php 24
+ERROR - 2013-10-25 11:17:32 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/views/account/notify.php 25
+ERROR - 2013-10-25 11:17:32 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/views/account/notify.php 25
+ERROR - 2013-10-25 11:17:41 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/models/client_m.php 142
+ERROR - 2013-10-25 11:17:41 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/controllers/account.php 374
+ERROR - 2013-10-25 11:17:41 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/controllers/account.php 375
+ERROR - 2013-10-25 11:17:41 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/controllers/account.php 376
+ERROR - 2013-10-25 11:17:41 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/models/client_m.php 142
+ERROR - 2013-10-25 11:17:41 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/controllers/account.php 385
+ERROR - 2013-10-25 11:17:41 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/views/account/notify.php 24
+ERROR - 2013-10-25 11:17:41 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/views/account/notify.php 24
+ERROR - 2013-10-25 11:17:41 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/views/account/notify.php 25
+ERROR - 2013-10-25 11:17:41 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/views/account/notify.php 25
+ERROR - 2013-10-25 11:17:52 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/models/client_m.php 142
+ERROR - 2013-10-25 11:17:52 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/controllers/account.php 374
+ERROR - 2013-10-25 11:17:52 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/controllers/account.php 375
+ERROR - 2013-10-25 11:17:52 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/controllers/account.php 376
+ERROR - 2013-10-25 11:17:52 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/models/client_m.php 142
+ERROR - 2013-10-25 11:17:52 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/controllers/account.php 385
+ERROR - 2013-10-25 11:17:52 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/views/account/notify.php 13
+ERROR - 2013-10-25 11:17:52 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/views/account/notify.php 24
+ERROR - 2013-10-25 11:17:52 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/views/account/notify.php 24
+ERROR - 2013-10-25 11:17:52 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/views/account/notify.php 25
+ERROR - 2013-10-25 11:17:52 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/views/account/notify.php 25
+ERROR - 2013-10-25 11:18:29 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/models/client_m.php 142
+ERROR - 2013-10-25 11:18:29 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/controllers/account.php 374
+ERROR - 2013-10-25 11:18:29 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/controllers/account.php 375
+ERROR - 2013-10-25 11:18:29 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/controllers/account.php 376
+ERROR - 2013-10-25 11:18:29 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/models/client_m.php 142
+ERROR - 2013-10-25 11:18:29 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/controllers/account.php 385
+ERROR - 2013-10-25 11:18:29 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/views/account/notify.php 13
+ERROR - 2013-10-25 11:18:29 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/views/account/notify.php 24
+ERROR - 2013-10-25 11:18:29 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/views/account/notify.php 24
+ERROR - 2013-10-25 11:18:29 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/views/account/notify.php 25
+ERROR - 2013-10-25 11:18:29 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/views/account/notify.php 25
+ERROR - 2013-10-25 11:18:31 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/models/client_m.php 142
+ERROR - 2013-10-25 11:18:31 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/controllers/account.php 374
+ERROR - 2013-10-25 11:18:31 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/controllers/account.php 375
+ERROR - 2013-10-25 11:18:31 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/controllers/account.php 376
+ERROR - 2013-10-25 11:18:31 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/models/client_m.php 142
+ERROR - 2013-10-25 11:18:31 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/controllers/account.php 385
+ERROR - 2013-10-25 11:18:31 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/views/account/notify.php 13
+ERROR - 2013-10-25 11:18:31 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/views/account/notify.php 24
+ERROR - 2013-10-25 11:18:31 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/views/account/notify.php 24
+ERROR - 2013-10-25 11:18:31 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/views/account/notify.php 25
+ERROR - 2013-10-25 11:18:31 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/views/account/notify.php 25
+ERROR - 2013-10-25 11:19:57 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/models/client_m.php 142
+ERROR - 2013-10-25 11:19:57 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/controllers/account.php 374
+ERROR - 2013-10-25 11:19:57 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/controllers/account.php 375
+ERROR - 2013-10-25 11:19:57 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/controllers/account.php 376
+ERROR - 2013-10-25 11:19:57 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/models/client_m.php 142
+ERROR - 2013-10-25 11:19:57 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/controllers/account.php 385
+ERROR - 2013-10-25 11:19:57 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/views/account/notify.php 13
+ERROR - 2013-10-25 11:19:57 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/views/account/notify.php 24
+ERROR - 2013-10-25 11:19:57 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/views/account/notify.php 24
+ERROR - 2013-10-25 11:19:57 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/views/account/notify.php 25
+ERROR - 2013-10-25 11:19:57 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/views/account/notify.php 25
+ERROR - 2013-10-25 11:20:08 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/models/client_m.php 142
+ERROR - 2013-10-25 11:20:08 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/controllers/account.php 374
+ERROR - 2013-10-25 11:20:08 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/controllers/account.php 375
+ERROR - 2013-10-25 11:20:08 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/controllers/account.php 376
+ERROR - 2013-10-25 11:20:08 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/models/client_m.php 142
+ERROR - 2013-10-25 11:20:08 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/controllers/account.php 385
+ERROR - 2013-10-25 11:20:08 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/views/account/notify.php 24
+ERROR - 2013-10-25 11:20:08 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/views/account/notify.php 24
+ERROR - 2013-10-25 11:20:08 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/views/account/notify.php 25
+ERROR - 2013-10-25 11:20:08 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/views/account/notify.php 25
+ERROR - 2013-10-25 11:20:26 --> Query error: Unknown column 'account_id' in 'where clause'
+ERROR - 2013-10-25 11:20:57 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/models/client_m.php 142
+ERROR - 2013-10-25 11:20:57 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/controllers/account.php 374
+ERROR - 2013-10-25 11:20:57 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/controllers/account.php 375
+ERROR - 2013-10-25 11:20:57 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/controllers/account.php 376
+ERROR - 2013-10-25 11:20:57 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/models/client_m.php 142
+ERROR - 2013-10-25 11:20:57 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/controllers/account.php 385
+ERROR - 2013-10-25 11:20:57 --> Severity: Notice  --> Uninitialized string offset: 0 /Applications/MAMP/htdocs/clockin/admin/application/views/account/notify.php 13
+ERROR - 2013-10-25 11:20:57 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/views/account/notify.php 24
+ERROR - 2013-10-25 11:20:57 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/views/account/notify.php 24
+ERROR - 2013-10-25 11:20:57 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/views/account/notify.php 25
+ERROR - 2013-10-25 11:20:57 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/views/account/notify.php 25
+ERROR - 2013-10-25 11:21:11 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/models/client_m.php 142
+ERROR - 2013-10-25 11:21:11 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/controllers/account.php 374
+ERROR - 2013-10-25 11:21:11 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/controllers/account.php 375
+ERROR - 2013-10-25 11:21:11 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/controllers/account.php 376
+ERROR - 2013-10-25 11:21:11 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/models/client_m.php 142
+ERROR - 2013-10-25 11:21:11 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/controllers/account.php 385
+ERROR - 2013-10-25 11:21:11 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/views/account/notify.php 13
+ERROR - 2013-10-25 11:21:11 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/views/account/notify.php 24
+ERROR - 2013-10-25 11:21:11 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/views/account/notify.php 24
+ERROR - 2013-10-25 11:21:11 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/views/account/notify.php 25
+ERROR - 2013-10-25 11:21:11 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/views/account/notify.php 25
+ERROR - 2013-10-25 11:21:19 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/models/client_m.php 142
+ERROR - 2013-10-25 11:21:19 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/controllers/account.php 374
+ERROR - 2013-10-25 11:21:19 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/controllers/account.php 375
+ERROR - 2013-10-25 11:21:19 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/controllers/account.php 376
+ERROR - 2013-10-25 11:21:19 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/models/client_m.php 142
+ERROR - 2013-10-25 11:21:19 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/controllers/account.php 385
+ERROR - 2013-10-25 11:21:19 --> Severity: Notice  --> Uninitialized string offset: 0 /Applications/MAMP/htdocs/clockin/admin/application/views/account/notify.php 13
+ERROR - 2013-10-25 11:21:19 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/views/account/notify.php 24
+ERROR - 2013-10-25 11:21:19 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/views/account/notify.php 24
+ERROR - 2013-10-25 11:21:19 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/views/account/notify.php 25
+ERROR - 2013-10-25 11:21:19 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/views/account/notify.php 25
+ERROR - 2013-10-25 11:23:05 --> Query error: Unknown column 'Array' in 'where clause'
+ERROR - 2013-10-25 11:23:45 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/models/client_m.php 127
+ERROR - 2013-10-25 11:23:45 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/models/client_m.php 127
+ERROR - 2013-10-25 11:23:45 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/models/client_m.php 144
+ERROR - 2013-10-25 11:23:45 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/controllers/account.php 374
+ERROR - 2013-10-25 11:23:45 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/controllers/account.php 375
+ERROR - 2013-10-25 11:23:45 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/controllers/account.php 376
+ERROR - 2013-10-25 11:23:45 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/models/client_m.php 127
+ERROR - 2013-10-25 11:23:45 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/models/client_m.php 144
+ERROR - 2013-10-25 11:23:45 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/controllers/account.php 385
+ERROR - 2013-10-25 11:23:45 --> Severity: Notice  --> Undefined index: actual_hours /Applications/MAMP/htdocs/clockin/admin/application/views/account/notify.php 13
+ERROR - 2013-10-25 11:23:45 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/views/account/notify.php 24
+ERROR - 2013-10-25 11:23:45 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/views/account/notify.php 24
+ERROR - 2013-10-25 11:23:45 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/views/account/notify.php 25
+ERROR - 2013-10-25 11:23:45 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/views/account/notify.php 25
+ERROR - 2013-10-25 11:24:23 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/models/client_m.php 127
+ERROR - 2013-10-25 11:24:23 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/models/client_m.php 127
+ERROR - 2013-10-25 11:24:23 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/models/client_m.php 144
+ERROR - 2013-10-25 11:24:23 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/controllers/account.php 374
+ERROR - 2013-10-25 11:24:23 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/controllers/account.php 375
+ERROR - 2013-10-25 11:24:23 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/controllers/account.php 376
+ERROR - 2013-10-25 11:24:23 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/models/client_m.php 127
+ERROR - 2013-10-25 11:24:23 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/models/client_m.php 144
+ERROR - 2013-10-25 11:24:23 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/controllers/account.php 385
+ERROR - 2013-10-25 11:24:23 --> Severity: Notice  --> Undefined index: actual_hours /Applications/MAMP/htdocs/clockin/admin/application/views/account/notify.php 13
+ERROR - 2013-10-25 11:24:23 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/views/account/notify.php 24
+ERROR - 2013-10-25 11:24:23 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/views/account/notify.php 24
+ERROR - 2013-10-25 11:24:23 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/views/account/notify.php 25
+ERROR - 2013-10-25 11:24:23 --> Severity: Notice  --> Trying to get property of non-object /Applications/MAMP/htdocs/clockin/admin/application/views/account/notify.php 25

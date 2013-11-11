@@ -1,0 +1,9 @@
+#Robots File
+
+User-agent: *
+
+Disallow: /cgi-bin/
+Disallow: /css/
+Disallow: /js/
+Disallow: /admin/
+Disallow: /assets/

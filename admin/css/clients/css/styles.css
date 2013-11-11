@@ -1,0 +1,163 @@
+body { padding-top:60px; padding-bottom: 40px; }
+
+a { color:#ED1C24; }
+a:hover, .active > a { color:#C1151B; }
+tfoot td { font-weight:bold; }
+
+#user-nav { float:right; }
+
+.link-but { font-weight:bold; display:inline-block !important;min-width:300px; }
+.link-but:after { content:" \00BB"; }
+
+input.code { width:160px; margin-right:2px; font-size:18px; font-family:"Lucida Console", Monaco, monospace;  text-transform:uppercase; font-weight:bold; letter-spacing:8px; padding:4px 12px; background:url("../images/bg-code-input-8.gif") no-repeat 10px 22px; }
+
+.panel-title { padding:15px; margin-top:10px; margin-bottom:10px; background-color:whiteSmoke; border-top:1px solid #E5E5E5;
+font-weight:bold; }
+.panel-content{ padding-left:20px; }
+
+.summary .lead { margin:14px 0 0 0; }
+.summary .location { font-size:1.2em; margin:0; color:#666; }
+
+.add-btn, .delete-btn { cursor:pointer; }
+
+.lead span { color:#C1151B; }
+
+/* Enter Codes */
+.heading-row { padding:0 0 10px; font-weight:bold; }
+.row .help { display:block; clear:both; padding:0 0 18px 0; position:relative; top:-6px; }
+
+
+/* Account Settings */
+#account-financial-settings { padding:5px; }
+#account-financial-settings dl { width:100%; overflow:hidden; }
+#account-financial-settings dt { float:left; width:40%; padding:0; margin:0; clear:both; }
+#account-financial-settings dd { float:left; width:60%; clear:none; padding:0; margin:0; }
+
+/* Reporting */
+#date-control { float:right; }
+#subnav .well { padding:8px 0; width:268px; }
+#subnav .active > a { background-color:#C1151B; }
+
+#navbar-reports { }
+#navbar-reports .brand { background:none; height:auto; margin:0; padding:10px 0; width:120px; }
+
+#pdf_form { float:right; }
+#pdf_btn { padding:5px 8px !important; } /* wierd hack to match the button to the ones embedded in flash by tabletools */
+
+/* DataTables */
+#DataTables_Table_0_filter { display:none; }
+.datatable { margin-top:1em; }
+.datatable .sorting,
+.datatable .sorting_asc,
+.datatable .sorting_desc {
+    cursor: pointer;
+    *cursor: hand;
+	padding-top:0;
+}
+
+.datatable thead input, .datatable thead select { margin-top:6px; font-size:12px; }
+.datatable thead select { width:auto; }
+.datatable thead input { width:80px; }
+ 
+.datatable .sorting:hover { background: url('../js/datatables/media/images/sort_asc.png') no-repeat top right; }
+.datatable .sorting_asc { background: url('../js/datatables/media/images/sort_asc.png') no-repeat top right; }
+.datatable .sorting_desc { background: url('../js/datatables/media/images/sort_desc.png') no-repeat top right; }
+
+.datatable td { font-size:12px; }
+
+.dataTables_info { font-style:italic; font-size:11px; color:#666; }
+
+.ColVis_collection { position:fixed !important; width:226px !important; left:50%; top:50%; height:200px; margin-top:-100px; margin-left:-110px; }
+.ColVis_collectionBackground { opacity:.5 !important; }
+
+.navbar-inner .container{width:1350px !important;}
+ .container{ width:1350px !important; }
+
+
+ /* overwrite bootstrap menu styles */
+.navbar-fixed-top, .navbar-fixed-bottom {font-weight: bold;font-size: 16px;}
+.codes-container { width: 100%; }
+.calendar_left {
+	float: left;
+	margin: 2px 5px 5px 40px;
+	border: 1px solid #cdcdcd;
+	padding:6px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	min-height: 250px;
+	max-width: 350px;
+	min-width: 350px;
+}
+.move {
+	margin-right: 30px;
+	float: left;
+}
+.single_code {
+	float:left;
+	width: 45%;
+	padding: 8px;
+	margin: 5px 97px 15px 0px;
+	
+}
+.dual_code {
+	float:left;
+	width: 45%;
+	padding: 8px;
+	margin: 5px 0px 15px 0px;
+	
+}
+.strike {
+	text-decoration:line-through;
+}
+.box {
+	float: left;
+	border: 1px solid #cdcdcd;
+	padding:8px;
+	margin: 2px 5px 5px 5px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	min-height: 250px;
+	max-width: 350px;
+	min-width: 350px;
+}
+#singlecode h4 { cursor: pointer;}
+#dualcode h4 {cursor: pointer;}
+
+.trigger { cursor: pointer; }
+
+#single-codes { display: none;}
+#start-end-codes { display: none;}
+
+.txt-alert { color: red; font-weight: normal; }
+.h3tag {
+	margin: 5px 0px 15px 5px;
+	font-size: 20px;
+	border-bottom: 1px solid #cdcdcd;
+	padding-bottom: 0px;
+}
+#footer {
+	float: left;
+	margin: 25px 0px 0px 10px;
+	border-top: 1px solid #cdcdcd;
+	width: 100%;
+}
+.footer_text {
+	margin: 5px 0px 0px 1px;
+	font-size: 10px;
+	color: #8A9298;
+}
+
+/* css for timepicker */
+.ui-timepicker-div .ui-widget-header { margin-bottom: 8px; }
+.ui-timepicker-div dl { text-align: left; }
+.ui-timepicker-div dl dt { height: 25px; margin-bottom: -25px; }
+.ui-timepicker-div dl dd { margin: 0 10px 10px 40px; }
+.ui-timepicker-div td { font-size: 50%; }
+.ui-tpicker-grid-label { background: none; border: none; margin: 0; padding: 0; }
+
+.ui-timepicker-rtl{ direction: rtl; }
+.ui-timepicker-rtl dl { text-align: right; }
+.ui-timepicker-rtl dl dd { margin: 0 65px 10px 10px; }
+
+
+ 

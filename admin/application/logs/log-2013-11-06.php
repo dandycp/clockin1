@@ -1,0 +1,62 @@
+<?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed'); ?>
+
+ERROR - 2013-11-06 09:58:54 --> Severity: Notice  --> Undefined property: CI_Loader::$account /Applications/MAMP/htdocs/clockin/admin/application/views/clients/header.php 141
+ERROR - 2013-11-06 09:58:54 --> Severity: Notice  --> Undefined property: CI_Loader::$account /Applications/MAMP/htdocs/clockin/admin/application/views/clients/header.php 147
+ERROR - 2013-11-06 09:58:54 --> Severity: Notice  --> Undefined property: CI_Loader::$account /Applications/MAMP/htdocs/clockin/admin/application/views/clients/header.php 153
+ERROR - 2013-11-06 09:58:54 --> Severity: Notice  --> Undefined property: CI_Loader::$account /Applications/MAMP/htdocs/clockin/admin/application/views/clients/header.php 171
+ERROR - 2013-11-06 09:58:54 --> Severity: Notice  --> Undefined property: CI_Loader::$account /Applications/MAMP/htdocs/clockin/admin/application/views/clients/header.php 175
+ERROR - 2013-11-06 09:58:54 --> Severity: Notice  --> Undefined property: CI_Loader::$account /Applications/MAMP/htdocs/clockin/admin/application/views/clients/header.php 179
+ERROR - 2013-11-06 09:58:54 --> Severity: Notice  --> Undefined property: CI_Loader::$account /Applications/MAMP/htdocs/clockin/admin/application/views/clients/header.php 179
+ERROR - 2013-11-06 10:03:36 --> Severity: Warning  --> DateTime::diff() expects parameter 1 to be DateTime, string given /Applications/MAMP/htdocs/clockin/admin/application/views/invoice/dashboard.php 24
+ERROR - 2013-11-06 10:05:01 --> Severity: Warning  --> date() expects at least 1 parameter, 0 given /Applications/MAMP/htdocs/clockin/admin/application/views/invoice/dashboard.php 23
+ERROR - 2013-11-06 10:05:01 --> Severity: Warning  --> date() expects at least 1 parameter, 0 given /Applications/MAMP/htdocs/clockin/admin/application/views/invoice/dashboard.php 23
+ERROR - 2013-11-06 10:05:01 --> Severity: Notice  --> Undefined property: CI_Loader::$account /Applications/MAMP/htdocs/clockin/admin/application/views/clients/header.php 141
+ERROR - 2013-11-06 10:05:01 --> Severity: Notice  --> Undefined property: CI_Loader::$account /Applications/MAMP/htdocs/clockin/admin/application/views/clients/header.php 147
+ERROR - 2013-11-06 10:05:01 --> Severity: Notice  --> Undefined property: CI_Loader::$account /Applications/MAMP/htdocs/clockin/admin/application/views/clients/header.php 153
+ERROR - 2013-11-06 10:05:01 --> Severity: Notice  --> Undefined property: CI_Loader::$account /Applications/MAMP/htdocs/clockin/admin/application/views/clients/header.php 171
+ERROR - 2013-11-06 10:05:01 --> Severity: Notice  --> Undefined property: CI_Loader::$account /Applications/MAMP/htdocs/clockin/admin/application/views/clients/header.php 175
+ERROR - 2013-11-06 10:05:01 --> Severity: Notice  --> Undefined property: CI_Loader::$account /Applications/MAMP/htdocs/clockin/admin/application/views/clients/header.php 179
+ERROR - 2013-11-06 10:05:01 --> Severity: Notice  --> Undefined property: CI_Loader::$account /Applications/MAMP/htdocs/clockin/admin/application/views/clients/header.php 179
+ERROR - 2013-11-06 10:05:23 --> Severity: Notice  --> Undefined property: CI_Loader::$account /Applications/MAMP/htdocs/clockin/admin/application/views/clients/header.php 141
+ERROR - 2013-11-06 10:05:23 --> Severity: Notice  --> Undefined property: CI_Loader::$account /Applications/MAMP/htdocs/clockin/admin/application/views/clients/header.php 147
+ERROR - 2013-11-06 10:05:23 --> Severity: Notice  --> Undefined property: CI_Loader::$account /Applications/MAMP/htdocs/clockin/admin/application/views/clients/header.php 153
+ERROR - 2013-11-06 10:05:23 --> Severity: Notice  --> Undefined property: CI_Loader::$account /Applications/MAMP/htdocs/clockin/admin/application/views/clients/header.php 171
+ERROR - 2013-11-06 10:05:23 --> Severity: Notice  --> Undefined property: CI_Loader::$account /Applications/MAMP/htdocs/clockin/admin/application/views/clients/header.php 175
+ERROR - 2013-11-06 10:05:23 --> Severity: Notice  --> Undefined property: CI_Loader::$account /Applications/MAMP/htdocs/clockin/admin/application/views/clients/header.php 179
+ERROR - 2013-11-06 10:05:23 --> Severity: Notice  --> Undefined property: CI_Loader::$account /Applications/MAMP/htdocs/clockin/admin/application/views/clients/header.php 179
+ERROR - 2013-11-06 10:05:30 --> Severity: Notice  --> Undefined property: CI_Loader::$account /Applications/MAMP/htdocs/clockin/admin/application/views/clients/header.php 141
+ERROR - 2013-11-06 10:05:30 --> Severity: Notice  --> Undefined property: CI_Loader::$account /Applications/MAMP/htdocs/clockin/admin/application/views/clients/header.php 147
+ERROR - 2013-11-06 10:05:30 --> Severity: Notice  --> Undefined property: CI_Loader::$account /Applications/MAMP/htdocs/clockin/admin/application/views/clients/header.php 153
+ERROR - 2013-11-06 10:05:30 --> Severity: Notice  --> Undefined property: CI_Loader::$account /Applications/MAMP/htdocs/clockin/admin/application/views/clients/header.php 171
+ERROR - 2013-11-06 10:05:30 --> Severity: Notice  --> Undefined property: CI_Loader::$account /Applications/MAMP/htdocs/clockin/admin/application/views/clients/header.php 175
+ERROR - 2013-11-06 10:05:30 --> Severity: Notice  --> Undefined property: CI_Loader::$account /Applications/MAMP/htdocs/clockin/admin/application/views/clients/header.php 179
+ERROR - 2013-11-06 10:05:30 --> Severity: Notice  --> Undefined property: CI_Loader::$account /Applications/MAMP/htdocs/clockin/admin/application/views/clients/header.php 179
+ERROR - 2013-11-06 10:06:25 --> Severity: Notice  --> Undefined property: CI_Loader::$account /Applications/MAMP/htdocs/clockin/admin/application/views/clients/header.php 141
+ERROR - 2013-11-06 10:06:25 --> Severity: Notice  --> Undefined property: CI_Loader::$account /Applications/MAMP/htdocs/clockin/admin/application/views/clients/header.php 147
+ERROR - 2013-11-06 10:06:25 --> Severity: Notice  --> Undefined property: CI_Loader::$account /Applications/MAMP/htdocs/clockin/admin/application/views/clients/header.php 153
+ERROR - 2013-11-06 10:06:25 --> Severity: Notice  --> Undefined property: CI_Loader::$account /Applications/MAMP/htdocs/clockin/admin/application/views/clients/header.php 171
+ERROR - 2013-11-06 10:06:25 --> Severity: Notice  --> Undefined property: CI_Loader::$account /Applications/MAMP/htdocs/clockin/admin/application/views/clients/header.php 175
+ERROR - 2013-11-06 10:06:25 --> Severity: Notice  --> Undefined property: CI_Loader::$account /Applications/MAMP/htdocs/clockin/admin/application/views/clients/header.php 179
+ERROR - 2013-11-06 10:06:25 --> Severity: Notice  --> Undefined property: CI_Loader::$account /Applications/MAMP/htdocs/clockin/admin/application/views/clients/header.php 179
+ERROR - 2013-11-06 10:06:53 --> Severity: Notice  --> Undefined property: CI_Loader::$account /Applications/MAMP/htdocs/clockin/admin/application/views/clients/header.php 141
+ERROR - 2013-11-06 10:06:53 --> Severity: Notice  --> Undefined property: CI_Loader::$account /Applications/MAMP/htdocs/clockin/admin/application/views/clients/header.php 147
+ERROR - 2013-11-06 10:06:53 --> Severity: Notice  --> Undefined property: CI_Loader::$account /Applications/MAMP/htdocs/clockin/admin/application/views/clients/header.php 153
+ERROR - 2013-11-06 10:06:53 --> Severity: Notice  --> Undefined property: CI_Loader::$account /Applications/MAMP/htdocs/clockin/admin/application/views/clients/header.php 171
+ERROR - 2013-11-06 10:06:53 --> Severity: Notice  --> Undefined property: CI_Loader::$account /Applications/MAMP/htdocs/clockin/admin/application/views/clients/header.php 175
+ERROR - 2013-11-06 10:06:53 --> Severity: Notice  --> Undefined property: CI_Loader::$account /Applications/MAMP/htdocs/clockin/admin/application/views/clients/header.php 179
+ERROR - 2013-11-06 10:06:53 --> Severity: Notice  --> Undefined property: CI_Loader::$account /Applications/MAMP/htdocs/clockin/admin/application/views/clients/header.php 179
+ERROR - 2013-11-06 10:07:40 --> Severity: Notice  --> Undefined property: CI_Loader::$account /Applications/MAMP/htdocs/clockin/admin/application/views/clients/header.php 141
+ERROR - 2013-11-06 10:07:40 --> Severity: Notice  --> Undefined property: CI_Loader::$account /Applications/MAMP/htdocs/clockin/admin/application/views/clients/header.php 147
+ERROR - 2013-11-06 10:07:40 --> Severity: Notice  --> Undefined property: CI_Loader::$account /Applications/MAMP/htdocs/clockin/admin/application/views/clients/header.php 153
+ERROR - 2013-11-06 10:07:40 --> Severity: Notice  --> Undefined property: CI_Loader::$account /Applications/MAMP/htdocs/clockin/admin/application/views/clients/header.php 171
+ERROR - 2013-11-06 10:07:40 --> Severity: Notice  --> Undefined property: CI_Loader::$account /Applications/MAMP/htdocs/clockin/admin/application/views/clients/header.php 175
+ERROR - 2013-11-06 10:07:40 --> Severity: Notice  --> Undefined property: CI_Loader::$account /Applications/MAMP/htdocs/clockin/admin/application/views/clients/header.php 179
+ERROR - 2013-11-06 10:07:40 --> Severity: Notice  --> Undefined property: CI_Loader::$account /Applications/MAMP/htdocs/clockin/admin/application/views/clients/header.php 179
+ERROR - 2013-11-06 10:43:04 --> Severity: Notice  --> Undefined property: CI_Loader::$account /Applications/MAMP/htdocs/clockin/admin/application/views/clients/header.php 141
+ERROR - 2013-11-06 10:43:04 --> Severity: Notice  --> Undefined property: CI_Loader::$account /Applications/MAMP/htdocs/clockin/admin/application/views/clients/header.php 147
+ERROR - 2013-11-06 10:43:04 --> Severity: Notice  --> Undefined property: CI_Loader::$account /Applications/MAMP/htdocs/clockin/admin/application/views/clients/header.php 153
+ERROR - 2013-11-06 10:43:04 --> Severity: Notice  --> Undefined property: CI_Loader::$account /Applications/MAMP/htdocs/clockin/admin/application/views/clients/header.php 171
+ERROR - 2013-11-06 10:43:04 --> Severity: Notice  --> Undefined property: CI_Loader::$account /Applications/MAMP/htdocs/clockin/admin/application/views/clients/header.php 175
+ERROR - 2013-11-06 10:43:04 --> Severity: Notice  --> Undefined property: CI_Loader::$account /Applications/MAMP/htdocs/clockin/admin/application/views/clients/header.php 179
+ERROR - 2013-11-06 10:43:04 --> Severity: Notice  --> Undefined property: CI_Loader::$account /Applications/MAMP/htdocs/clockin/admin/application/views/clients/header.php 179
+ERROR - 2013-11-06 19:49:42 --> Severity: Notice  --> Undefined variable: title /Applications/MAMP/htdocs/clockin/admin/application/views/clients/header.php 5
