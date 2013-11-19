@@ -15,9 +15,9 @@
 <link rel="stylesheet" href="<?php echo site_url(); ?>css/entry.css" />
 <link rel="stylesheet" href="<?php echo site_url(); ?>css/invoice.css" />
 <!-- javascript/jQuery -->
+<script src="<?php echo site_url(); ?>js/jquery-10.js" type="text/javascript"></script>
 <script src="<?php echo site_url(); ?>js/post.js" type="text/javascript"></script>
 <script src="<?php echo site_url(); ?>js/bootstrap3.js" type="text/javascript"></script>
-<script src="<?php echo site_url(); ?>js/jquery-10.js" type="text/javascript"></script>
 <script src="<?php echo site_url(); ?>js/jquery-ui.js" type="text/javascript"></script>
 <script src="<?php echo site_url(); ?>js/bootstrap.js" type="text/javascript"></script>
 
