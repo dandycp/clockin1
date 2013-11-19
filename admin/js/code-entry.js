@@ -177,28 +177,33 @@ function replace_incorrect_characters($field)
 function validate_field($field) 
 {
 	replace_incorrect_characters($field);
-	
-	var code = $field.val();	
-	
+
+	var code = $field.val();
+    var type = $field.hasClass('end-code') ? 'end' : 'start' ;
+    var $control_group = $field.closest('.control-group');
+    var $row = $field.closest('.row');
+    var selector = '.help-block.'+type;
+    var $helpBlock = $control_group.find(selector);
+
 	// check they've actually selected a client, if appropriate
 	if ($("#client_id").size() && $("#client_id").val() == '') {
-		alert('A client must be selected');	
+		alert('A client must be selected');
 	}
 	// if a client has been selected, pass this as the user_id
 	var user_id = $("#client_id option:selected").size() ? $("#client_id option:selected").val() : '' ;
 	//console.log('doing validation ' + code);
-	var $control_group = $field.closest('.control-group');
-	var $row = $field.closest('.row');
+
+
 	if ($field.data('request') != null) $field.data('request').abort();
-	$control_group.find('.help-block').html('');
+	$helpBlock.html('');
 	var request = $.getJSON('codes/validate/' + code + '/' + user_id, function(data) {
 		if (data.valid) {
 			$control_group.addClass('success');
 			$control_group.removeClass('error');
-			$row.find('.help-block').html(data.device.name + ' - ' + data.reason);
+			$helpBlock.html(data.device.name + ' - ' + data.reason);
 			$field.data('device', data.device);
 			// if this is an 'end' code, prompt the user, if their start code was for a different device
-			if ($field.hasClass('end-code')) {
+			if (type == 'end') {
 				$start_code = $row.find('.start-code');
 				if ($start_code.data('device').id != data.device.id) 
 					alert('Notice: End code is for a different device');
@@ -208,7 +213,7 @@ function validate_field($field)
 			$control_group.removeClass('success');
 			var msg = data.reason;
 			msg = msg + ' - try our <a target="_blank" href="codes/finder">Near Miss Finder</a>';
-			$row.find('.help-block').html(msg);
+			$helpBlock.html(msg);
 		}
 	});
 	$field.data('request', request);
