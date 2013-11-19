@@ -132,13 +132,16 @@
 				<a class="add-btn"><img src="<?php echo site_url(); ?>images/add.png" width="16" height="16"></a> 
 				<a class="delete-btn" style="display:none;"><img src="<?php echo site_url(); ?>images/delete.png" width="16" height="16"></a>
 			</div>
-			<div class="span1"></div>
-			<div class="span1">
-				<div class="help-block"></div>
-			</div>
-			
-			
-		</div>
+
+		</div><!--  end first .row -->
+        <div class="row">
+            <div class="span3">
+                <div class="help-block start">help start</div>
+            </div>
+            <div class="span3">
+                <div class="help-block end">help end</div>
+            </div>
+        </div>
 		<div style="clear:both; height: 5px;"></div>
 		<div class="form-group" style="margin: 3px 0px 4px 0px;">
 			<button type="submit" class="btn btn-success btn-large">Confirm</button>
