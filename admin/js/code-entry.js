@@ -22,7 +22,9 @@ $(function() {
 	
 	$(".codes-container").on('keyup', '.code', function(e) {
 		var $this = $(this);
-		if ($this.val().length == 8) validate_field($this);
+		if ($this.val().length == 8) {
+			validate_field($this);
+		}
 	});
 	
 	// auto-tabbing for start codes
