@@ -32,8 +32,7 @@ $(function() {
 		$this_row = $(this).closest('.code-row');
 		if (char_count == 8 && input_character(e)) {
 			if ($this_row.is(':last-child')) {
-				// add a new row
-				add_row($(this));
+				// do nothing
 			} else {
 				// tab to the next one
 				$this_row.closest('.codes-container').find('.code-row:last-child input:eq(0)').focus();
