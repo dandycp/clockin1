@@ -106,7 +106,8 @@ function add_row($trigger_element)
 	var num_rows = $container.find(".code-row").size();
 	var $old_row = $container.find(".code-row").eq(num_rows-1);
 	var $new_row = $old_row.clone();
-	$new_row.appendTo($container);
+    $new_row.appendTo($container);
+
 	
 	$container.find(".code-row").each(function(index){
 		$(this).find('input,select').each(function(){
@@ -118,6 +119,7 @@ function add_row($trigger_element)
 	$new_row.find("input").val('').eq(0).focus();
 	$old_row.find(".add-btn").hide();
 	$new_row.find(".add-btn, .delete-btn").show();
+    $new_row.find(".help-block").html('');
 	
 	// set default values where applicable
 	var category_id = $("#default_category_id").val();
