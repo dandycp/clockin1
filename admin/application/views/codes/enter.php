@@ -85,6 +85,7 @@
 	
 		
 		<div class="codes-container">
+            <div class="code-row">
 		<div class="row">
 			
 		
@@ -141,14 +142,15 @@
             <div class="span3">
                 <div class="help-block end">help end</div>
             </div>
-        </div>
+        </div><!-- end second .row -->
 		<div style="clear:both; height: 5px;"></div>
+            </div><!-- end .code-row -->
+            </div><!-- end .codes-container -->
 		<div class="form-group" style="margin: 3px 0px 4px 0px;">
 			<button type="submit" class="btn btn-success btn-large">Confirm</button>
 		</div>
 </form>
-	</div> <!--end #start-end-codes-->
+	</div> <!--end .pull-left -->
 
-</div>
 <script src="<?php echo site_url(); ?>js/jquery.autotab-1.1b.js"></script>
 <script src="<?php echo site_url(); ?>js/code-entry.js"></script>

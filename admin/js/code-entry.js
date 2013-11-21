@@ -9,7 +9,7 @@ $(function() {
 	// delete button action
 	$(".codes-container").on('click','.delete-btn', function (e) {
 		e.preventDefault();
-		delete_row($(this).closest('.row'));
+		delete_row($(this).closest('.code-row'));
 	});
 	
 	// only allow input of valid characters
@@ -29,14 +29,14 @@ $(function() {
 	$(".codes-container").on('keyup', '.single-code, .end-code', function(e) {
 		// add a new row if this is the last row
 		var char_count = $(this).val().length;
-		$this_row = $(this).closest('.row');
+		$this_row = $(this).closest('.code-row');
 		if (char_count == 8 && input_character(e)) {
 			if ($this_row.is(':last-child')) {
 				// add a new row
 				add_row($(this));
 			} else {
 				// tab to the next one
-				$this_row.closest('.codes-container').find('.row:last-child input:eq(0)').focus();
+				$this_row.closest('.codes-container').find('.code-row:last-child input:eq(0)').focus();
 			}
 		}
 	});
@@ -46,7 +46,7 @@ $(function() {
 		// move to the end code
 		var char_count = $(this).val().length;
 		if (char_count == 8 && input_character(e)) {
-			$this_row = $(this).closest('.row');
+			$this_row = $(this).closest('.code-row');
 			$this_row.find('.end-code').focus();
 		}
 	});
@@ -58,11 +58,11 @@ $(function() {
 	
 	// default values
 	$("#default_category_id").change(function(e) {
-		var $next_empty_row = $(".code:text[value='']").closest('.row');
+		var $next_empty_row = $(".code:text[value='']").closest('.code-row');
 		if ($next_empty_row) $next_empty_row.find(".category_id").val($(this).val());
 	});
 	$("#default_person_id").change(function(e) {
-		var $next_empty_row = $(".code:text[value='']").closest('.row');
+		var $next_empty_row = $(".code:text[value='']").closest('.code-row');
 		if ($next_empty_row) $next_empty_row.find(".person_id").val($(this).val());
 	});
 	$("#default_provider_id").change(function(e) {
@@ -104,12 +104,12 @@ function populate_categories(data)
 function add_row($trigger_element) 
 {
 	var $container = $trigger_element.closest('.codes-container');
-	var num_rows = $container.find(".row").size();
-	var $old_row = $container.find(".row").eq(num_rows-1);
+	var num_rows = $container.find(".code-row").size();
+	var $old_row = $container.find(".code-row").eq(num_rows-1);
 	var $new_row = $old_row.clone();
 	$new_row.appendTo($container);
 	
-	$container.find(".row").each(function(index){
+	$container.find(".code-row").each(function(index){
 		$(this).find('input,select').each(function(){
 			var new_name = $(this).attr("name").replace(/\[\d+\]/,"["+index+"]");
 			$(this).attr("name", new_name);
@@ -131,7 +131,7 @@ function delete_row($row)
 {
 	var $container = $row.closest('.codes-container');
 	$row.remove();
-	var $last_row = $container.find(".row:last-child");
+	var $last_row = $container.find(".code-row:last-child");
 	$last_row.find(".add-btn").show();
 }
 
@@ -181,9 +181,9 @@ function validate_field($field)
 	var code = $field.val();
     var type = $field.hasClass('end-code') ? 'end' : 'start' ;
     var $control_group = $field.closest('.control-group');
-    var $row = $field.closest('.row');
-    var selector = '.help-block.'+type;
-    var $helpBlock = $control_group.find(selector);
+    var $row = $field.closest('.code-row');
+    var selector = '.help-block.' + type;
+    var $helpBlock = $row.find(selector);
 
 	// check they've actually selected a client, if appropriate
 	if ($("#client_id").size() && $("#client_id").val() == '') {
