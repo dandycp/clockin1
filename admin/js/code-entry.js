@@ -25,21 +25,6 @@ $(function() {
 		if ($this.val().length == 8) validate_field($this);
 	});
 	
-	// auto-tabbing and row creation for single and end codes
-	$(".codes-container").on('keyup', '.single-code, .end-code', function(e) {
-		// add a new row if this is the last row
-		var char_count = $(this).val().length;
-		$this_row = $(this).closest('.code-row');
-		if (char_count == 8 && input_character(e)) {
-			if ($this_row.is(':last-child')) {
-				// do nothing
-			} else {
-				// tab to the next one
-				$this_row.closest('.codes-container').find('.code-row:last-child input:eq(0)').focus();
-			}
-		}
-	});
-	
 	// auto-tabbing for start codes
 	$(".codes-container").on('keyup', '.start-code', function(e) {
 		// move to the end code
