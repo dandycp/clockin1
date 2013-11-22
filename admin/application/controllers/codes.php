@@ -361,6 +361,7 @@ class Codes extends MY_Controller
 	{
 		$valid = true;
 		$reason = '';
+        $timestamp = null;
 		$device = new StdClass();
 		if (!$account_id) $account = $this->account;
 		else $account = R::load('account', $account_id);
@@ -386,6 +387,7 @@ class Codes extends MY_Controller
 			$device->name = '<strong>'.$our_device->name. '</strong>';
 			$format = 'j M Y - H:i';
 			$time_string = $time->format($format);
+            $timestamp = $time->getTimestamp();
 			$reason = $time_string;
 			$valid = true;
 		} catch (Exception $e) {
@@ -394,7 +396,7 @@ class Codes extends MY_Controller
 		}
 			
 
-		$result = array('valid'=>$valid, 'reason'=>$reason, 'device'=>$device);
+		$result = array('valid'=>$valid, 'reason'=>$reason, 'device'=>$device, 'timestamp'=>$timestamp);
 		if ($this->input->is_ajax_request()) {
 			echo json_encode($result);
 			exit;
