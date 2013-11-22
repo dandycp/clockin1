@@ -142,6 +142,9 @@
             <div class="span3">
                 <div class="help-block end"></div>
             </div>
+            <div class="span3">
+                <div class="duration"></div>
+            </div>
         </div><!-- end second .row -->
 		<div style="clear:both; height: 5px;"></div>
             </div><!-- end .code-row -->
