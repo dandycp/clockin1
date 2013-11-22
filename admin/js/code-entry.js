@@ -107,6 +107,7 @@ function add_row($trigger_element)
 	$old_row.find(".add-btn").hide();
 	$new_row.find(".add-btn, .delete-btn").show();
     $new_row.find(".help-block").html('');
+    $new_row.find('.duration').html('');
 	
 	// set default values where applicable
 	var category_id = $("#default_category_id").val();
@@ -184,17 +185,25 @@ function validate_field($field)
 
 	if ($field.data('request') != null) $field.data('request').abort();
 	$helpBlock.html('');
+    $field.data('timestamp', null);
 	var request = $.getJSON('codes/validate/' + code + '/' + user_id, function(data) {
 		if (data.valid) {
 			$control_group.addClass('success');
 			$control_group.removeClass('error');
 			$helpBlock.html(data.device.name + ' - ' + data.reason);
 			$field.data('device', data.device);
+            $field.data('timestamp', data.timestamp);
 			// if this is an 'end' code, prompt the user, if their start code was for a different device
 			if (type == 'end') {
 				$start_code = $row.find('.start-code');
 				if ($start_code.data('device').id != data.device.id) 
 					alert('Notice: End code is for a different device');
+                // calculate the duration between the start and end codes
+                $start_time = $start_code.data('timestamp');
+                $end_time = $field.data('timestamp');
+                var duration = $end_time - $start_time;
+                var durationText = moment.duration(duration, "seconds").humanize();
+                $row.find('.duration').html('Duration: ' + durationText);
 			}
 		} else {
 			$control_group.addClass('error');
