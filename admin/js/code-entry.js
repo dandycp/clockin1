@@ -202,7 +202,9 @@ function validate_field($field)
                 $start_time = $start_code.data('timestamp');
                 $end_time = $field.data('timestamp');
                 var duration = $end_time - $start_time;
-                var durationText = moment.duration(duration, "seconds").humanize();
+                var hours = Math.floor(duration / 3600);
+                var minutes = Math.round((duration - (hours * 3660)) / 60);
+                var durationText = hours + 'h, ' + minutes + 'm';
                 $row.find('.duration').html('Duration: ' + durationText);
 			}
 		} else {

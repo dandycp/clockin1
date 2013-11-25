@@ -156,5 +156,4 @@
 	</div> <!--end .pull-left -->
 
 <script src="<?php echo site_url(); ?>js/jquery.autotab-1.1b.js"></script>
-<script src="<?php echo site_url(); ?>js/moment.min.js"></script>
 <script src="<?php echo site_url(); ?>js/code-entry.js"></script>
