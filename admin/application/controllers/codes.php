@@ -1,6 +1,14 @@
-<?php 
+<?php
 
 require_once APPPATH . '/libraries/payload.php';
+
+/**
+ * Class Codes
+ *
+ * @property Auth $auth
+ * @property Model_Account $account
+ * @property Encryption $encryption
+ */
 
 class Codes extends MY_Controller
 {
@@ -128,6 +136,7 @@ class Codes extends MY_Controller
 			$device_id = $_POST['device_id'];
 			$device = R::load('device', $device_id);
 			$time = $_POST['time'];
+            $low_battery = (!empty($_POST['low_battery'])) ? true : false ;
 			$timestamp = strtotime($time);
 			$initial_timestamp = strtotime($device->initial_time);
 			$initial_timecode = $device->initial_code;
@@ -140,7 +149,6 @@ class Codes extends MY_Controller
 			$t0 = $initial_timecode;
 			$minutes_elapsed = ceil($seconds_elapsed / 60);
 			
-			$low_battery = false;
 			$error_code = 0;
 			$this->encryption->packCipherText($text, $secret_key, $device_id, $t0, $minutes_elapsed, $low_battery, $error_code);
 			
@@ -150,7 +158,8 @@ class Codes extends MY_Controller
 		}
 		$title = 'Generate New Codes';
 		$this->load->view('codes/generate', compact(
-			'devices','device_id','secret_key','initial_timecode', 'initial_timestamp', 'error','time','timestamp','code','minutes_elapsed','title'
+			'devices','device_id','secret_key','initial_timecode', 'initial_timestamp',
+            'error','time','timestamp','code','minutes_elapsed','title','low_battery'
 		));
 	}
 	
