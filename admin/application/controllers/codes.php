@@ -288,8 +288,8 @@ class Codes extends MY_Controller
 		$ids[] = $id;
 		$this->session->set_userdata('recent_code_ids', $ids);
 	}
-	
-	function code_to_time($code, $account=false)
+
+	function code_to_time($code, $account=false, &$low_battery=false)
 	{
 		// find out what time this code relates to
 		$this->load->library('encryption');
@@ -304,7 +304,7 @@ class Codes extends MY_Controller
 			// todo - check they have permissions for this device
 			$initial_timestamp = strtotime($device->initial_time);
 			$date = $payload->getDateTime($device->initial_code, $initial_timestamp);
-			$low_batt = $payload->getLowBattery();
+			$low_battery = $payload->getLowBattery();
 			// check that the time is not before the device was set up
 			$earliest_date = new DateTime($device->initial_time);			
 			if ($date < $earliest_date) throw new Exception('<span class="txt-alert">Oops, that\'s an invalid code.</span>');
@@ -382,8 +382,9 @@ class Codes extends MY_Controller
 			if (strlen($code) != 8) throw new Exception('Code must be exactly 8 characters long');
 			
 			if (!preg_match('/[a-z0-O]{8}/i', $code)) throw new Exception('Code must only contain a-z, 0-9');
-			
-			$time = $this->code_to_time($code, $account);
+
+            $low_battery = false;
+			$time = $this->code_to_time($code, $account, $low_battery);
 			$our_device = $this->code_to_device($code, $account);
 			
 			// check whether the code has been used previously and whether that exceeds the settings on the device
@@ -391,6 +392,10 @@ class Codes extends MY_Controller
 				if ($previous && count($previous) > $our_device->max_code_reuse)
 					throw new Exception('Code ' . $code . ' has been entered previously');
 			}
+
+            // notify our BatteryStatus handler of this device's current status
+            $this->load->library('BatteryStatus');
+            $this->batterystatus->update_device($our_device, $low_battery);
 			
 			$device->id = $our_device->id;
 			$device->name = '<strong>'.$our_device->name. '</strong>';
@@ -404,8 +409,14 @@ class Codes extends MY_Controller
 			$reason = $e->getMessage();
 		}
 			
+		$result = array(
+            'valid' => $valid,
+            'reason' => $reason,
+            'device' => $device,
+            'timestamp' => $timestamp,
+            'low_battery' => $low_battery
+        );
 
-		$result = array('valid'=>$valid, 'reason'=>$reason, 'device'=>$device, 'timestamp'=>$timestamp);
 		if ($this->input->is_ajax_request()) {
 			echo json_encode($result);
 			exit;
