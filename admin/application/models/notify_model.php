@@ -22,15 +22,6 @@ class Notify_model extends CI_Model {
     	}
     	$Q->free_result();  
     	return $data;
-
-    	if ($this->encryption->unpackCipherText($code, $key, $payload, $error_code)) 
-		{
-			$device_id = $payload->getDeviceId();
-			$low_batt = $payload->getLowBattery(); // Low Battery Function
-			$device = R::load('device', $device_id);
-			return $device;
-			
-		}
 	}
 	function read_message($id)
 	{
