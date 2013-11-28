@@ -13,7 +13,7 @@ class BatteryStatus {
      */
     public function update_device(RedBean_OODBBean $device, $low_battery)
     {
-        error_log('Device ' . $device->name . ' battery status is: ' . $low_battery);
+        throw new Exception('Device ' . $device->name . ' battery status is: ' . $low_battery);
     }
 
 } 

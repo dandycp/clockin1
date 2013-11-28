@@ -11,7 +11,6 @@ class Account extends MY_Controller
 		//Do your magic here
 		//$this->output->enable_profiler(TRUE);
 
-		//$message = $this->notify_model->get_message();
 		$this->load->vars();
 	}
 	
@@ -362,10 +361,13 @@ class Account extends MY_Controller
 		// Load Notification Model
 		$this->load->model('client_m');
 		$this->load->model('invoice_model');
+        $this->load->model('notify_model');
 		$this->load->library('email');
 		$account_id = $this->session->userdata('account_id');
 		
 		$invoice = $this->invoice_model->get_invoices_unpaid();
+
+        $notifications = $this->notify_model->get_messages($account_id);
 		/*
 		$error = false;
 		$today = date('j F Y H:i');
@@ -430,7 +432,9 @@ class Account extends MY_Controller
 		}
 		*/
 		$title = 'Notifications';
-		$this->load->view('account/notify', compact('title','rate','client','user','account_id','today','rate','rt','first','last','invoice'));
+		$this->load->view('account/notify', compact(
+            'title','rate','client','user','account_id','today','rate','rt','first','last','invoice','notifications'
+        ));
 	}
 	
 

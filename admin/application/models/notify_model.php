@@ -8,21 +8,24 @@ class Notify_model extends CI_Model {
 		
 	}
 
-	public function get_message()
+    /**
+     * Return a list of messages for a particular account
+     *
+     * @param int $account_id
+     * @return array
+     */
+    public function get_messages($account_id)
 	{
-		$data = array();
-		$this->db->select('id, user_id, account_number, message_content, created, status');
-	 	//$this->db->where('account_number', $this->session->userdata('account_number'));
-	 	$this->db->order_by('created', 'desc'); // Orders by date/time newest first
-     	$Q = $this->db->get('messages');
-     	if ($Q->num_rows() > 0){
-       		foreach ($Q->result_array() as $row){
-         	$data[] = $row;
-        	}
-    	}
-    	$Q->free_result();  
-    	return $data;
+        $messages = R::find('message', '
+            account_id = ? AND `status` = 1
+            ORDER BY created DESC
+            ',
+            array($account_id)
+        );
+
+    	return $messages;
 	}
+
 	function read_message($id)
 	{
 		$data = array(
@@ -32,8 +35,8 @@ class Notify_model extends CI_Model {
         );
 		$this->db->where('id', $id);
 		$this->db->update('messages', $data); 
-		
 	}
+
 	function remove_after($id)
 	{
 		$this->load->helper('date');
@@ -44,7 +47,6 @@ class Notify_model extends CI_Model {
 
 	function device_count()
     {
-    	
     	$this->db->where('account_id', $this->session->userdata('account_number'));
     	return $this->db->count_all_results('device');
         //echo $this->db->count_all_results('device');

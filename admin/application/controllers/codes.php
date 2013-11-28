@@ -241,8 +241,9 @@ class Codes extends MY_Controller
 		
 		$code_string = $code_arr['code'];
 		$end_code_string = ($type == 'pair') ? $code_arr['end_code'] : NULL ;
-		
-		$time = $this->code_to_time($code_string, $account);		
+
+        $low_battery = false;
+		$time = $this->code_to_time($code_string, $account, $low_battery);
 		$end_time = ($end_code_string) ? $this->code_to_time($end_code_string, $account) : NULL ;
 		
 		// swap pairs around if they've entered start/end in wrong order
@@ -257,14 +258,19 @@ class Codes extends MY_Controller
 			$code_string = $swap;
 			
 		}
-		
-		$format = 'Y-m-d H:i:s P';
-		$time_string = $time->format($format);
-		$end_time_string = ($end_time) ? $end_time->format($format) : NULL ;
-		
-		$device = $this->code_to_device($code_string, $account);
-		
-		$code = R::dispense('code');
+
+
+        $format = 'Y-m-d H:i:s P';
+        $time_string = $time->format($format);
+        $end_time_string = ($end_time) ? $end_time->format($format) : NULL ;
+
+        $device = $this->code_to_device($code_string, $account);
+
+        // notify our BatteryStatus handler of this device's current status
+        $this->load->library('BatteryStatus');
+        $this->batterystatus->update_device($device, $low_battery);
+
+        $code = R::dispense('code');
 		$code->code = $code_string;
 		$code->end_code = $end_code_string;
 		$code->type = $type;
@@ -393,10 +399,6 @@ class Codes extends MY_Controller
 					throw new Exception('Code ' . $code . ' has been entered previously');
 			}
 
-            // notify our BatteryStatus handler of this device's current status
-            $this->load->library('BatteryStatus');
-            $this->batterystatus->update_device($our_device, $low_battery);
-			
 			$device->id = $our_device->id;
 			$device->name = '<strong>'.$our_device->name. '</strong>';
 			$format = 'j M Y - H:i';
