@@ -47,7 +47,7 @@ window.setTimeout(function() {
             <?=$notification->content?>
         </td>
         <td>
-            &nbsp;
+            <a href="notifications/dismiss/<?=$notification->id?>" class="btn btn-danger">Dismiss</a>
         </td>
     </tr>
     <?php endforeach ?>
