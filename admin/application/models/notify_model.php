@@ -26,6 +26,34 @@ class Notify_model extends CI_Model {
     	return $messages;
 	}
 
+    /**
+     * Creates a new notification
+     *
+     * @param array $data
+     */
+    public function create(array $data)
+    {
+        // if a notification with this ref already exists, remove it first
+        $this->remove_by_ref($data['ref'], $data['account_id']);
+        $notification = R::dispense('message');
+        $notification->import($data, 'content,ref,account_id,status');
+        R::store($notification);
+    }
+
+    public function remove_by_ref($ref, $account_id)
+    {
+        $notification = $this->find($ref, $account_id);
+        if ($notification) {
+            R::trash($notification);
+        }
+    }
+
+    public function find($ref, $account_id)
+    {
+        $result = R::findOne('message', 'account_id = ? AND ref = ?', array($account_id, $ref));
+        return $result;
+    }
+
 	function read_message($id)
 	{
 		$data = array(
