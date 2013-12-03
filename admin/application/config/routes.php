@@ -47,7 +47,8 @@ $route['404_override'] = 'errors/error_404';
 
 $route['clients/reports'] 						= 'reports/index';
 $route['clients/codes'] 						= 'codes/index';
-$route['clients/notifications']					= 'account/notifications';
+$route['clients/notifications']					= 'notifications';
+$route['clients/notifications/(:any)']	        = 'notifications/$1';
 $route['clients/send_to_friend']				= 'clients/send_to_friend';
 $route['clients/devices/device_search']	        = 'devices/device_search';
 
