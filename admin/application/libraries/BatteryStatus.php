@@ -24,7 +24,8 @@ class BatteryStatus {
             $CI->notify_model->create(array(
                 'content' => $message,
                 'ref' => $ref,
-                'account_id' => $device->account_id
+                'account_id' => $device->account_id,
+                'email_frequency' => 'weekly'
             ));
 
         } else {

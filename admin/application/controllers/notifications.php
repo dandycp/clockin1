@@ -1,6 +1,12 @@
 <?php 
 require_once APPPATH . '/libraries/payload.php';
 
+/**
+ * Class Notifications
+ *
+ * @property Notify_model $notify_model
+ */
+
 class Notifications extends MY_Controller
 {
 
@@ -10,6 +16,7 @@ class Notifications extends MY_Controller
 		parent::__construct();
 		//Do your magic here
 		//$this->output->enable_profiler(TRUE);
+        $this->load->model('notify_model');
 		$this->load->vars();
 	}
 	
@@ -20,7 +27,6 @@ class Notifications extends MY_Controller
 		// Load Notification Model
 		$this->load->model('client_m');
 		$this->load->model('invoice_model');
-        $this->load->model('notify_model');
 		$this->load->library('email');
 		$account_id = $this->session->userdata('account_id');
 		
@@ -117,6 +123,22 @@ class Notifications extends MY_Controller
 
         redirect('/clients/notifications');
     }
-	
+
+    /**
+     * Called by a cron on a regular basis. Triggers sending of notifications
+     * that require regular email reminders
+     */
+    public function trigger_email_notifications()
+    {
+        $notifications = $this->notify_model->find_notifications_due_for_email();
+        if ($notifications) {
+            foreach ($notifications as $notification) {
+                $this->notify_model->send_notification_email($notification);
+            }
+        }
+        echo '---DONE---' . '<br>';
+        echo '(Sent ' . count($notifications) . ' notifications)';
+        exit;
+    }
 
 }
