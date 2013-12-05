@@ -101,7 +101,6 @@ class Notify_model extends CI_Model {
 
         $name  = $notification->account->user->name;
         $email = $notification->account->user->email;
-        $email = 'andycoatz@gmail.com';
         $logo  = base_url().'images/logo-mpdf.png';
         $today = date("j F Y");
 
@@ -116,7 +115,7 @@ class Notify_model extends CI_Model {
 						<a href='http://www.clockinpoint.com'>www.clockinpoint.com</a>
 						";
 
-        $this->email->from('info@clockinpoint.com');
+        $this->email->from('no-reply@clockinpoint.com');
         $this->email->to($email);
         $this->email->subject('Clock In Point - You have new notifications');
 
