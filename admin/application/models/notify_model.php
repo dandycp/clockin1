@@ -123,6 +123,9 @@ class Notify_model extends CI_Model {
 
         $this->email->send();
         $this->email->clear();
+
+        $notification->email_sent_at = date("Y-m-d H:i:s");
+        R::store($notification);
     }
 
 	function read_message($id)
