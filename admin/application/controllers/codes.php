@@ -401,7 +401,7 @@ class Codes extends MY_Controller
 
 			$device->id = $our_device->id;
 			$device->name = '<strong>'.$our_device->name. '</strong>';
-			$format = 'j M Y - H:i';
+			$format = 'd/m/y H:i';
 			$time_string = $time->format($format);
             $timestamp = $time->getTimestamp();
 			$reason = $time_string;
