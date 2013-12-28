@@ -186,7 +186,7 @@ function validate_field($field)
 	if ($field.data('request') != null) $field.data('request').abort();
 	$helpBlock.html('');
     $field.data('timestamp', null);
-	var request = $.getJSON('codes/validate/' + code + '/' + user_id, function(data) {
+	var request = $.getJSON(site_url + 'codes/validate/' + code + '/' + user_id, function(data) {
 		if (data.valid) {
 			$control_group.addClass('success');
 			$control_group.removeClass('error');

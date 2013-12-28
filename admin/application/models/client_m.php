@@ -149,18 +149,15 @@ class Client_m extends MY_Model {
 	function update_messages()
 	{
 		$id = $this->session->userdata('account_id');
-		$created = date('j F Y H:i');
 		$info = $this->client_m->get_user_infofor_notifications();
 
 		$data = array(
-			'account_id' 	  => $id,
-			'message_content' => 'some content',
-			'created'		  => $created,
-			'status'		  => 1,
+			'account_id'    => $id,
+			'content'       => 'some content',
+			'status'        => 1
 		);
 
-		//$this->db->where('account_id', $id);
-		$this->db->insert('messages', $data); 
+		$this->db->insert('message', $data);
 	}
 	
 

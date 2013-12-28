@@ -29,6 +29,16 @@
 			
 		</div>
 	</div>
+
+    <div class="row-container">
+		<div class="control-group">
+			<label class="control-label">Low battery:</label>
+			<div class="controls">
+				<input type="checkbox" name="low_battery" <?php if ($low_battery) echo 'checked="checked"' ?> value="1"/>
+			</div>
+
+		</div>
+	</div>
 	
 	<div class="form-actions">
 		<button type="submit" class="btn btn-success btn-large">Get Code</button>

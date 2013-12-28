@@ -37,6 +37,9 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.3.0/respond.js"></script>
 <![endif]-->
 <script type="text/javascript">
+// global site_url var
+var site_url = '<?=site_url()?>';
+
 $(function(){
   // change page to ajax_page in pagination urls
   $('#pagination a').each(function(){

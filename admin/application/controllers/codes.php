@@ -1,6 +1,14 @@
-<?php 
+<?php
 
 require_once APPPATH . '/libraries/payload.php';
+
+/**
+ * Class Codes
+ *
+ * @property Auth $auth
+ * @property Model_Account $account
+ * @property Encryption $encryption
+ */
 
 class Codes extends MY_Controller
 {
@@ -128,6 +136,7 @@ class Codes extends MY_Controller
 			$device_id = $_POST['device_id'];
 			$device = R::load('device', $device_id);
 			$time = $_POST['time'];
+            $low_battery = (!empty($_POST['low_battery'])) ? true : false ;
 			$timestamp = strtotime($time);
 			$initial_timestamp = strtotime($device->initial_time);
 			$initial_timecode = $device->initial_code;
@@ -140,7 +149,6 @@ class Codes extends MY_Controller
 			$t0 = $initial_timecode;
 			$minutes_elapsed = ceil($seconds_elapsed / 60);
 			
-			$low_battery = false;
 			$error_code = 0;
 			$this->encryption->packCipherText($text, $secret_key, $device_id, $t0, $minutes_elapsed, $low_battery, $error_code);
 			
@@ -150,7 +158,8 @@ class Codes extends MY_Controller
 		}
 		$title = 'Generate New Codes';
 		$this->load->view('codes/generate', compact(
-			'devices','device_id','secret_key','initial_timecode', 'initial_timestamp', 'error','time','timestamp','code','minutes_elapsed','title'
+			'devices','device_id','secret_key','initial_timecode', 'initial_timestamp',
+            'error','time','timestamp','code','minutes_elapsed','title','low_battery'
 		));
 	}
 	
@@ -232,8 +241,9 @@ class Codes extends MY_Controller
 		
 		$code_string = $code_arr['code'];
 		$end_code_string = ($type == 'pair') ? $code_arr['end_code'] : NULL ;
-		
-		$time = $this->code_to_time($code_string, $account);		
+
+        $low_battery = false;
+		$time = $this->code_to_time($code_string, $account, $low_battery);
 		$end_time = ($end_code_string) ? $this->code_to_time($end_code_string, $account) : NULL ;
 		
 		// swap pairs around if they've entered start/end in wrong order
@@ -248,14 +258,19 @@ class Codes extends MY_Controller
 			$code_string = $swap;
 			
 		}
-		
-		$format = 'Y-m-d H:i:s P';
-		$time_string = $time->format($format);
-		$end_time_string = ($end_time) ? $end_time->format($format) : NULL ;
-		
-		$device = $this->code_to_device($code_string, $account);
-		
-		$code = R::dispense('code');
+
+
+        $format = 'Y-m-d H:i:s P';
+        $time_string = $time->format($format);
+        $end_time_string = ($end_time) ? $end_time->format($format) : NULL ;
+
+        $device = $this->code_to_device($code_string, $account);
+
+        // notify our BatteryStatus handler of this device's current status
+        $this->load->library('BatteryStatus');
+        $this->batterystatus->update_device($device, $low_battery);
+
+        $code = R::dispense('code');
 		$code->code = $code_string;
 		$code->end_code = $end_code_string;
 		$code->type = $type;
@@ -279,8 +294,8 @@ class Codes extends MY_Controller
 		$ids[] = $id;
 		$this->session->set_userdata('recent_code_ids', $ids);
 	}
-	
-	function code_to_time($code, $account=false)
+
+	function code_to_time($code, $account=false, &$low_battery=false)
 	{
 		// find out what time this code relates to
 		$this->load->library('encryption');
@@ -295,7 +310,7 @@ class Codes extends MY_Controller
 			// todo - check they have permissions for this device
 			$initial_timestamp = strtotime($device->initial_time);
 			$date = $payload->getDateTime($device->initial_code, $initial_timestamp);
-			$low_batt = $payload->getLowBattery();
+			$low_battery = $payload->getLowBattery();
 			// check that the time is not before the device was set up
 			$earliest_date = new DateTime($device->initial_time);			
 			if ($date < $earliest_date) throw new Exception('<span class="txt-alert">Oops, that\'s an invalid code.</span>');
@@ -373,8 +388,9 @@ class Codes extends MY_Controller
 			if (strlen($code) != 8) throw new Exception('Code must be exactly 8 characters long');
 			
 			if (!preg_match('/[a-z0-O]{8}/i', $code)) throw new Exception('Code must only contain a-z, 0-9');
-			
-			$time = $this->code_to_time($code, $account);
+
+            $low_battery = false;
+			$time = $this->code_to_time($code, $account, $low_battery);
 			$our_device = $this->code_to_device($code, $account);
 			
 			// check whether the code has been used previously and whether that exceeds the settings on the device
@@ -382,10 +398,10 @@ class Codes extends MY_Controller
 				if ($previous && count($previous) > $our_device->max_code_reuse)
 					throw new Exception('Code ' . $code . ' has been entered previously');
 			}
-			
+
 			$device->id = $our_device->id;
 			$device->name = '<strong>'.$our_device->name. '</strong>';
-			$format = 'j M Y - H:i';
+			$format = 'd/m/y H:i';
 			$time_string = $time->format($format);
             $timestamp = $time->getTimestamp();
 			$reason = $time_string;
@@ -395,8 +411,14 @@ class Codes extends MY_Controller
 			$reason = $e->getMessage();
 		}
 			
+		$result = array(
+            'valid' => $valid,
+            'reason' => $reason,
+            'device' => $device,
+            'timestamp' => $timestamp,
+            'low_battery' => $low_battery
+        );
 
-		$result = array('valid'=>$valid, 'reason'=>$reason, 'device'=>$device, 'timestamp'=>$timestamp);
 		if ($this->input->is_ajax_request()) {
 			echo json_encode($result);
 			exit;

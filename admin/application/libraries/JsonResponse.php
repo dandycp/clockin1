@@ -10,7 +10,7 @@ class JsonResponse {
 	{
 		$this->status = $status;
 		if ($status == 'ok') $this->data = $data;
-		else $this->errors = $errors;
+		else $this->errors = $data;
 	}
 	
 	function display()
